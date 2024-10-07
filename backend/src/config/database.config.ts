@@ -1,5 +1,5 @@
 export const dbConfig = () => ({
-    databse: {
+    database: {
         host: process.env.DB_HOST,
         port: process.env.DB_PORT,
         dbName: process.env.DB_NAME,
@@ -7,5 +7,5 @@ export const dbConfig = () => ({
         user: process.env.DB_USER
     },
 });
-
+ 
 
