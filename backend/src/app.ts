@@ -3,6 +3,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config'
 import { appConfig } from './config/app.config';
 import { dbConfig } from './config/database.config';
 import { SequelizeModule } from '@nestjs/sequelize';
+import { Book, User } from './modules';
 
 
 @Module({
@@ -22,6 +23,7 @@ import { SequelizeModule } from '@nestjs/sequelize';
           username: config.get('database.user'),
           password: config.get('database.password'),
           database: config.get('database.dbName'),
+          models: [User, Book],
           synchronize: true,
           logging: console.log,
           autoLoadModels: true,
